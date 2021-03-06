@@ -82,4 +82,18 @@ WHERE C.dept_name = 'Sales'
 --------------------------------------------
 --------------------------------------------
 
+SELECT 	A.emp_no, 
+		A.last_name, 
+		A.first_name, 
+		C.dept_name
+FROM Employees as A
+INNER JOIN Dept_Emp as B
+ON A.emp_no = B.emp_no
+INNER JOIN Departments as C
+ON B.depto_no = C.depto_no
+WHERE C.dept_name in ('Sales', 'Development')
+;
 
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
