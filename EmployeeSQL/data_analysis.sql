@@ -34,3 +34,18 @@ ON A.depto_no = B.depto_no
 INNER JOIN Employees as C
 ON A.emp_no = C.emp_no
 ;
+
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+
+SELECT 	A.emp_no, 
+		B.last_name, 
+		B.first_name, 
+		C.dept_name
+FROM Dept_Emp as A
+INNER JOIN Employees as B
+ON A.emp_no = B.emp_no
+INNER JOIN Departments as C
+ON A.depto_no = C.Depto_no
+;
