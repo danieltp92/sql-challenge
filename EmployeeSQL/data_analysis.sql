@@ -97,3 +97,11 @@ WHERE C.dept_name in ('Sales', 'Development')
 --------------------------------------------
 --------------------------------------------
 --------------------------------------------
+
+SELECT 	A.last_name, 
+		COUNT(A.last_name) AS repeat
+FROM Employees as A
+GROUP BY A.last_name
+ORDER BY repeat DESC, 
+		 A.last_name
+;
